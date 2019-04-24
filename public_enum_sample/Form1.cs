@@ -12,20 +12,21 @@ namespace public_enum_sample
 {
     public partial class Form1 : Form
     {
-        //現在下注金額
-        int mybet=0;
+        //現在下注的金額
+        int mybet =0;
 
         //列舉不同的賭注金額
-        enum betmoney { clear,bet1, bet5,bet10,betdouble}
+        enum betmoney { clear, bet1, bet5, bet10, betdouble }
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        //賭注金額
+        //賭注金額增減
         private void BetMoney(betmoney money)
         {
+            //依照不同的狀況，增加玩家的下注金額
             switch(money)
             {
                 case betmoney.bet1:
@@ -74,6 +75,7 @@ namespace public_enum_sample
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //剛開始下注金額顯示為0
             lbResult.Text = "0";
         }
 
