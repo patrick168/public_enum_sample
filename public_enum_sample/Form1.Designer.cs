@@ -108,7 +108,7 @@
             this.Controls.Add(this.money5);
             this.Controls.Add(this.lbResult);
             this.Name = "Form1";
-            this.Text = "enum and switch";
+            this.Text = "下注系統使用enum,switch";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

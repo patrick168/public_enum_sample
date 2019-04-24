@@ -12,8 +12,10 @@ namespace public_enum_sample
 {
     public partial class Form1 : Form
     {
+        //現在下注金額
         int mybet=0;
 
+        //列舉不同的賭注金額
         enum betmoney { clear,bet1, bet5,bet10,betdouble}
 
         public Form1()
@@ -21,6 +23,7 @@ namespace public_enum_sample
             InitializeComponent();
         }
 
+        //賭注金額
         private void BetMoney(betmoney money)
         {
             switch(money)
@@ -40,26 +43,30 @@ namespace public_enum_sample
                 case betmoney.betdouble:
                     mybet *= 2;
                     break;
-            }
-          
+            }          
+            //結果顯示於textbox
             lbResult.Text = mybet.ToString();
         }
 
+        //按下1元
         private void money1_Click(object sender, EventArgs e)
         {
             BetMoney(betmoney.bet1);
         }
 
+        //按下5元
         private void money5_Click(object sender, EventArgs e)
         {
             BetMoney(betmoney.bet5);
         }
 
+        //按下10元
         private void money10_Click(object sender, EventArgs e)
         {
             BetMoney(betmoney.bet10);
         }
 
+        //按下reset
         private void money0_Click(object sender, EventArgs e)
         {
             BetMoney(0);
@@ -70,6 +77,7 @@ namespace public_enum_sample
             lbResult.Text = "0";
         }
 
+        //按下double
         private void moneyDouble_Click(object sender, EventArgs e)
         {
             BetMoney(betmoney.betdouble);
